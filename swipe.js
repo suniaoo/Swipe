@@ -217,7 +217,7 @@ function Swipe(container, options) {
 				var tmp = Math.abs(dist) / width;
 
 				if (tmp <= 0.5) {
-					scaleRatio = 0.1 - tmp * 0.2	
+					scaleRatio = (1 - scale) - tmp * 0.2	
 				} else {
 					scaleRatio = 0;
 				}
@@ -227,7 +227,7 @@ function Swipe(container, options) {
 				if (tmp <= 0.5) {
 					scaleRatio = tmp * 0.2;	
 				} else {
-					scaleRatio = 0.1;	
+					scaleRatio = 1 - scale;
 				}	
 			}
 
