@@ -54,13 +54,13 @@ Swipe can take an optional second parameter– an object of key/value settings:
 
 - **stopPropagation** Boolean *(default:false)* - stop event propagation
  
--	**callback** Function - runs at slide change.
+- **callback** Function - runs at slide change.
 
 - **transitionEnd** Function - runs at the end slide transition.
 
-- **gap** Number the width gap of current slide's(default px, not support others) 
+- **gap** Number *(default:0)* the width gap of current slide's(default px, not support others) 
 
-- **scale**  Float value of other slide's transform scale(0 - 1)
+- **scale**  Float *(default:1)* value of other slide's transform scale(0 - 1)
 
 - **onStart** Function Triggered when a touch event begins
 
