@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width'>
+		<title>test</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				margin: 50px 0;	
+			}
+			.swipe {
+				overflow: hidden;
+				visibility: hidden;
+				position: relative;
+			}
+			.swipe-wrap {
+				overflow: hidden;
+				position: relative;
+				/*
+				font-size: 0;
+				white-space: nowrap;
+				width: auto !important;
+				*/
+			}
+			.swipe-wrap > div {
+				/*
+				font-size: 20px;
+				display: inline-block;
+				*/
+				float: left;
+				width:100%;
+				position: relative;
+			}
+
+			.item {
+				/*
+				padding: 0 2.5px;
+				box-sizing: border-box;
+				background-clip: content-box;
+				*/
+			}
+
+			.item1:nth-child(even) {
+				background-color: red;	
+			}
+
+			.item1:nth-child(odd) {
+				background-color: blue;	
+			}
+
+			.item1 {
+				height: 500px;	
+				padding: 0 10px;
+				margin-right: 5px;
+			}
+		</style>
+		<script src="swipe.js"></script>
+	</head>
+	<body>
+		<div id='slider' class='swipe'>
+			<div class='swipe-wrap'>
+				<div class='item'>
+					<div class='item1'>1</div>	
+				</div>
+				<div class='item'>
+					<div class='item1'>2</div>	
+				</div>
+				<div class='item'>
+					<div class='item1'>3</div>	
+				</div>
+				<div class='item'>
+					<div class='item1'>4</div>	
+				</div>
+			</div>
+		</div>
+		<script>
+			var sliderDom = document.querySelector('#slider');
+			window.mySwipe = Swipe(sliderDom, {
+				gap: 15,
+				scale: 0.9,
+				onStart: function() {
+					console.log('start')	
+				},
+				onScrollNext: function() {
+					console.log('next')	
+				},
+				onScrollPrev: function() {
+					console.log('prev')	
+				}
+			});	
+		</script>
+	</body>
+</html>

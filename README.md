@@ -58,6 +58,16 @@ Swipe can take an optional second parameter– an object of key/value settings:
 
 - **transitionEnd** Function - runs at the end slide transition.
 
+- **gap** Number the width gap of current slide's(default px, not support others) 
+
+- **scale**  Float value of other slide's transform scale(0 - 1)
+
+- **onStart** Function Triggered when a touch event begins
+
+- **onScrollNext** Function Triggered when element snaps to the next segment 
+
+- **onScrollPrev** Function Triggered when element snaps to the previous segment
+
 ### Example
 
 ``` js
@@ -66,6 +76,8 @@ window.mySwipe = new Swipe(document.getElementById('slider'), {
   startSlide: 2,
   speed: 400,
   auto: 3000,
+  gap: 15,
+  scale: 0.9
   continuous: true,
   disableScroll: false,
   stopPropagation: false,
@@ -74,6 +86,10 @@ window.mySwipe = new Swipe(document.getElementById('slider'), {
 });
 
 ```
+
+
+### Demo
+scale demo please open scale.html
 
 ## Swipe API
 
